@@ -1,0 +1,74 @@
+{
+   "777d5f5e-5abf-4e96-a5f0-5f54f3170ad2": {
+      "resourceKinds": [{
+         "resourceKindKey": "VirtualMachine",
+         "adapterKindKey": "VMWARE"
+      }],
+      "modificationTime": 1664390460061,
+      "name": "VM Parent ESXi Host CPU Core Speed",
+      "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, attribute=hardware|cpuInfo|hz, depth=-1})",
+      "description": "",
+      "unitId": "ghz",
+      "modifiedBy": "287ed085-c6ca-4255-b69c-956f1665ed51"
+   },
+   "987479aa-159c-4717-81dc-75a3e75bc914": {
+      "resourceKinds": [{
+         "resourceKindKey": "VirtualMachine",
+         "adapterKindKey": "VMWARE"
+      }],
+      "modificationTime": 1664371062069,
+      "name": "VM Parent ESXi Host CPU Packages",
+      "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, attribute=hardware|cpuInfo|numCpuPackages, depth=-1})",
+      "description": "",
+      "unitId": "",
+      "modifiedBy": "287ed085-c6ca-4255-b69c-956f1665ed51"
+   },
+   "8c382797-12a7-485a-9b08-550869aa6eae": {
+      "resourceKinds": [{
+         "resourceKindKey": "VirtualMachine",
+         "adapterKindKey": "VMWARE"
+      }],
+      "modificationTime": 1664393099022,
+      "name": "VM Parent Cluster Usable CPUs",
+      "formula": "sum(${adaptertype=VMWARE, objecttype=ClusterComputeResource, attribute=cpu|haCorecount_provisioned, depth=-2})",
+      "description": "",
+      "unitId": "",
+      "modifiedBy": "287ed085-c6ca-4255-b69c-956f1665ed51"
+   },
+   "6923079e-7597-4a13-bc21-c25c6921a5ed": {
+      "resourceKinds": [{
+         "resourceKindKey": "VirtualMachine",
+         "adapterKindKey": "VMWARE"
+      }],
+      "modificationTime": 1664371244530,
+      "name": "VM Parent ESXi Host CPU Cores",
+      "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, attribute=hardware|cpuInfo|numCpuCores, depth=-1})",
+      "description": "",
+      "unitId": "",
+      "modifiedBy": "287ed085-c6ca-4255-b69c-956f1665ed51"
+   },
+   "2db89e71-3a45-4a9e-a391-17b82cc18e20": {
+      "resourceKinds": [{
+         "resourceKindKey": "VirtualMachine",
+         "adapterKindKey": "VMWARE"
+      }],
+      "modificationTime": 1664392982994,
+      "name": "VM Parent Cluster Physical CPUs",
+      "formula": "sum(${adaptertype=VMWARE, objecttype=ClusterComputeResource, attribute=cpu|corecount_provisioned, depth=-2})",
+      "description": "",
+      "unitId": "",
+      "modifiedBy": "287ed085-c6ca-4255-b69c-956f1665ed51"
+   },
+   "091e582a-5c35-4c41-b047-d079a5605156": {
+      "resourceKinds": [{
+         "resourceKindKey": "VirtualMachine",
+         "adapterKindKey": "VMWARE"
+      }],
+      "modificationTime": 1664371577567,
+      "name": "VM Parent Cluster DRS Status",
+      "formula": "sum(${adaptertype=VMWARE, objecttype=ClusterComputeResource, attribute=configuration|drsconfig|enabled, depth=-2})",
+      "description": "",
+      "unitId": "",
+      "modifiedBy": "287ed085-c6ca-4255-b69c-956f1665ed51"
+   }
+}
